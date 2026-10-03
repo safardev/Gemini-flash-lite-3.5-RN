@@ -11,7 +11,7 @@ import {
   Keyboard,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-
+import Config from 'react-native-config'
 import InputComponent from '../components/InputComponent';
 import OuputComponent from '../components/OuputComponent';
 
