@@ -13,6 +13,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import InputComponent from '../components/InputComponent';
+import OuputComponent from '../components/OuputComponent';
 
 const HomeScreen = () => {
   const { width } = useWindowDimensions();
@@ -27,6 +28,7 @@ const HomeScreen = () => {
       >
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <View style={styles.screen}>
+            {/* header */}
             <View style={styles.headerContainer}>
               <Text
                 style={[
@@ -39,6 +41,11 @@ const HomeScreen = () => {
                 Gemini Flash Lite 3.5 🤘
               </Text>
             </View>
+            {/* output component */}
+            <View style={styles.outputContainer}>
+              <OuputComponent />
+            </View>
+            {/* input component */}
             <View style={styles.inputContainer}>
               <InputComponent />
             </View>
@@ -67,6 +74,12 @@ const styles = StyleSheet.create({
   },
   header: {
     textAlign: 'center',
+  },
+  outputContainer: {
+    flex: 1,
+    marginHorizontal: 8,
+    paddingVertical: 8,
+    paddingHorizontal: 16,
   },
   inputContainer: {
     alignItems: 'center',
